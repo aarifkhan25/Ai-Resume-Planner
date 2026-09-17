@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const api=axios.create({
-    baseURL:"http://localhost:8888/api/auth",
+    baseURL:"https://ai-resume-planner.vercel.app/api/auth",
     withCredentials:true
     
 })
