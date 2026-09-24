@@ -15,6 +15,7 @@ async function handleGenerateInterviewReport({resume,selfDescription,jobDescript
         setReport(response.interviewReport)
 
     } catch (error) {
+        alert("Error during generate interview report:",error)
             console.error("Error to Generate report:", error);
         }finally{
             setLoading(false);
@@ -29,6 +30,7 @@ async function handleGetInterviewReportById(interviewId) {
         setReport(response.interviewReport)
 
     } catch (error) {
+          alert("Error during Get Invterview report by id:",error)
             console.error("Error to find  InterviewId:", error);
         }finally{
             setLoading(false);
@@ -44,7 +46,8 @@ async function handleGetAllInterviewReport() {
         setReports(response.interviewReports)
 
     } catch (error) {
-            console.error("Error to find  InterviewId:", error);
+         alert("Error during view all Invterview report",error)
+            console.error("("Error during view all Invterview report", error);
         }finally{
             setLoading(false);
         }
@@ -65,7 +68,8 @@ async function handleGenerateResumePdf(interviewReportId) {
         
 
     }catch (error) {
-            console.error("Error to find  InterviewId:", error);
+          alert("Error during generate resume pdf ",error)
+            console.error("Error during generate resume pdf:", error);
         }finally{
             setLoading(false);
         }
